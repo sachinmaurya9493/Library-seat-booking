@@ -1,26 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Library Seat Booking</title>
+<title>Library Seat Booking System</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<h1>Library Seat Booking</h1>
-<p>Apni seat select karo</p>
+<header>
+<h1>Library Seat & Resource Booking System</h1>
+<p>Student Name: Sachin Maurya | Reg No: 12614601</p>
+</header>
 
-<div class="seats">
-  <button class="seat" onclick="bookSeat(this)">1</button>
-  <button class="seat" onclick="bookSeat(this)">2</button>
-  <button class="seat" onclick="bookSeat(this)">3</button>
-  <button class="seat" onclick="bookSeat(this)">4</button>
-  <button class="seat" onclick="bookSeat(this)">5</button>
-  <button class="seat" onclick="bookSeat(this)">6</button>
+<div class="box">
+<h2>Welcome to LPU Central Library</h2>
+<p>Book your seat in advance and avoid crowd.</p>
+<p>Total Seats: 20 | Available: <span id="avail">20</span> | Booked: <span id="bookedCount">0</span></p>
 </div>
 
-<p id="msg"></p>
+<div class="box">
+<h2>Select Your Seat</h2>
+<div id="seatBox"></div>
+</div>
+
+<div class="box">
+<h2>Booking Form</h2>
+<p>Selected Seat: <b id="selectedSeat">None</b></p>
+<input id="name" placeholder="Enter Your Name"><br><br>
+<button onclick="bookSeat()">Book Seat</button>
+</div>
+
+<div class="box">
+<h2>My Bookings</h2>
+<p id="myBooking">No booking yet.</p>
+</div>
 
 <script src="script.js"></script>
 </body>
