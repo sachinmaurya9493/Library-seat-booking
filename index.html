@@ -1,37 +1,114 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Library Seat Booking System</title>
+<title>LPU Central Library - Seat Booking</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
-<h1>Library Seat & Resource Booking System</h1>
-<p>Student Name: Sachin Maurya | Reg No: 12614601</p>
+<h1>LPU Central Library</h1>
+<p>Library Seat & Resource Booking System</p>
+<p>Sachin Maurya | Reg No: 12614601</p>
 </header>
+
+<div class="container">
 
 <div class="box">
 <h2>Welcome to LPU Central Library</h2>
-<p>Book your seat in advance and avoid crowd.</p>
-<p>Total Seats: 20 | Available: <span id="avail">20</span> | Booked: <span id="bookedCount">0</span></p>
+<p>Our library has 1000+ books, e-journals, computer lab and a peaceful reading hall. Students can book their seat in advance and study without any crowd.</p>
+<div class="timing-box">
+<b>Library Timings:</b><br>
+Monday - Saturday: 08:00 AM - 10:00 PM<br>
+Sunday: 09:00 AM - 05:00 PM<br>
+During Exams: Open 24 Hours
+</div>
+<p><b>Total Seats: 20 | Available: <span id="avail">20</span> | Booked: <span id="bookedCount">0</span></b></p>
+</div>
+
+<div class="box">
+<h2>About Library</h2>
+<p>LPU Central Library me 50,000+ books, 100 computers, 5 group study rooms aur free Wi-Fi available hai. Silent study aur exam preparation ke liye alag zones bane hue hai.</p>
+</div>
+
+<div class="box">
+<h2>Available Resources</h2>
+<p>1. <b>Books:</b> 50,000+ Books for all subjects</p>
+<p>2. <b>Computers:</b> 100 Computers with internet</p>
+<p>3. <b>Study Rooms:</b> 5 Group Study Rooms</p>
+<p>4. <b>E-Resources:</b> Free Wi-Fi, E-books, Journals</p>
+<p>5. <b>Newspapers:</b> Daily Hindi & English Newspapers</p>
 </div>
 
 <div class="box">
 <h2>Select Your Seat</h2>
+<p>Green = Available, Red = Booked, Orange = Selected</p>
 <div id="seatBox"></div>
+<p>Selected Seat: <b id="selectedSeat">None</b></p>
 </div>
 
 <div class="box">
-<h2>Booking Form</h2>
-<p>Selected Seat: <b id="selectedSeat">None</b></p>
-<input id="name" placeholder="Enter Your Name"><br><br>
+<h2>Book Your Seat</h2>
+<input id="name" placeholder="Enter Your Name">
+<input id="reg" placeholder="Enter Reg No - 12614601">
+<input type="date" id="date">
+<select id="slot">
+<option>09:00 AM - 11:00 AM</option>
+<option>11:00 AM - 02:00 PM</option>
+<option>02:00 PM - 05:00 PM</option>
+<option>05:00 PM - 08:00 PM</option>
+</select>
+<select id="resource">
+<option>Only Seat</option>
+<option>Seat + Book</option>
+<option>Seat + Computer</option>
+<option>Seat + Study Room</option>
+</select>
 <button onclick="bookSeat()">Book Seat</button>
 </div>
 
 <div class="box">
 <h2>My Bookings</h2>
 <p id="myBooking">No booking yet.</p>
+</div>
+
+<div class="box">
+<h2>Cancel Booking - Sirf Apni Booking</h2>
+<p>Cancel karne ke liye wahi Reg No dalo jo book karte time dala tha.</p>
+<input id="cancelReg" placeholder="Enter Your Reg No to Cancel">
+<button class="cancel" onclick="cancelBooking()">Cancel My Booking</button>
+</div>
+
+<div class="box">
+<h2>How To Book?</h2>
+<p>1. Pehle apni seat chuno.</p>
+<p>2. Naam, Reg No, Date aur Slot bharo.</p>
+<p>3. Book Seat dabao.</p>
+<p>4. Library aane par apna ID Card dikhao.</p>
+</div>
+
+<div class="box">
+<h2>Library Rules & Regulations</h2>
+<p>• 1. <b>ID Card is Compulsory:</b> Students must carry their LPU ID Card for entry in the library.</p>
+<p>• 2. <b>Maintain Silence:</b> Talking loudly, talking on phone and making noise is not allowed inside the library.</p>
+<p>• 3. <b>Seat Booking:</b> One student can book only one seat at a time. Do not sit on a seat without booking.</p>
+<p>• 4. <b>Reach on Time:</b> Students must reach the library within 15 minutes of booking time, otherwise the seat will be auto-cancelled.</p>
+<p>• 5. <b>Food is Not Allowed:</b> Eating food, cold drinks or tea is not allowed inside the library. Only water bottle is allowed.</p>
+<p>• 6. <b>Take Care of Books:</b> Do not tear, write or take books outside without issuing. Fine will be charged.</p>
+<p>• 7. <b>Mobile on Silent Mode:</b> Keep your mobile on silent or vibration mode. Video calls are strictly not allowed.</p>
+<p>• 8. <b>Keep Cleanliness:</b> Keep your seat clean and throw waste in the dustbin.</p>
+<p>• 9. <b>2 Books Limit:</b> One student can issue maximum 2 books for 14 days at a time.</p>
+<p>• 10. <b>Late Fine:</b> Rs. 5/- per day fine will be charged for late return of books.</p>
+</div>
+
+<div class="box">
+<h2>Contact Us</h2>
+<p><b>Location:</b> LPU Central Library, Block - 32, Phagwara, Punjab</p>
+<p><b>Email:</b> library@lpu.co.in</p>
+<p><b>Timing:</b> Monday - Saturday, 8 AM - 10 PM</p>
+<p><b>Student:</b> Sachin Maurya | Reg No: 12614601</p>
+</div>
+
 </div>
 
 <script src="script.js"></script>
