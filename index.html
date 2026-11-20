@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Library Seat Booking</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+<h1>Library Seat Booking</h1>
+<p>Book Your Seat Online</p>
+</header>
+
+<div class="container">
+<div class="box">
+<h2>Select Seat</h2>
+<p>Green = Free, Red = Booked, Orange = Selected</p>
+<div id="seatBox"></div>
+<p>Selected: <b id="selectedSeat">None</b></p>
+</div>
+
+<div class="box">
+<h2>Book Seat</h2>
+<input id="name" placeholder="Your Name">
+<input id="reg" placeholder="Reg No">
+<input type="date" id="date">
+<select id="slot">
+<option>09 AM - 11 AM</option>
+<option>11 AM - 02 PM</option>
+<option>02 PM - 05 PM</option>
+<option>05 PM - 08 PM</option>
+</select>
+<button onclick="bookSeat()">Book Seat</button>
+</div>
+
+<div class="box">
+<h2>My Booking</h2>
+<p id="myBooking">No booking yet.</p>
+<input id="cancelReg" placeholder="Enter Reg No to Cancel">
+<button class="cancel" onclick="cancelBooking()">Cancel Booking</button>
+</div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
